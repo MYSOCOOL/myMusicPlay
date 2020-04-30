@@ -1,0 +1,200 @@
+/* pages/showplayer/index.wxss */
+.applicationcontext-page{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574497461493&di=7bb0bee6e3c47fe1f90f7a2f28418791&imgtype=0&src=http%3A%2F%2Fwww.51pptmoban.com%2Fd%2Ffile%2F2012%2F06%2F06%2Fc6c6423a3661cc6e8ffcf47e52af4230.jpg");
+  background-repeat: no-repeat no-repeat;
+}
+
+.showplery-page{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 85%;
+}
+
+
+@keyframes iconRotate{
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+.showplery-image-page{
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50% 50%;
+  animation: iconRotate 20s linear infinite;
+  }
+
+.bottom-up-page{
+   display: flex;
+   align-items: center;
+   flex-flow: nowrap;
+   width: 100%;
+   height: 7.5%;
+   background-color: #A15718;
+   border-bottom: 1rpx solid #BD782D;
+}
+
+.bottom-dwon-page{
+   display: flex;
+   align-items: center;
+   border-left-width: nowrap;
+   width: 100%;
+   height: 7.5%;
+   background-color: #A15718; 
+}
+
+.yuan-page{
+  width:50rpx;
+  height: 50rpx;
+  border-radius: 50% 50%;
+  border: 1rpx solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 11%;
+}
+
+.icon-page-y{
+  margin-left:20%;
+}
+
+.icon-page-y-b{
+  margin-left: 11%;
+}
+
+.icon-imagesty{
+  width: 100%;
+  height: 100%;
+}
+
+.yuan-page-b{
+  width:60rpx;
+  height: 60rpx;
+  border-radius: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+@keyframes wordsLoop {
+  0% {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes wordsLoop {
+  0% {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+.show-textinfor{
+  position: absolute;
+  animation:20s wordsLoop linear infinite normal;
+  font-size: 27rpx;
+  color: white;
+  font-weight: bold;
+}
+
+.show-textinfor-musicinfor{
+   position: absolute;
+   bottom: 350rpx;
+   font-size: 33rpx;
+   font-weight: bold;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+}
+
+.mask-page{
+  width:100%;
+  height: 100%;
+  background:black;
+  z-index: 2;
+  opacity:0.7;
+  position: fixed; 
+  bottom: 0rpx;
+}
+
+.musicList-page{
+  width: 100%;
+  height: 700rpx;
+  background-color:#A15718; 
+  z-index: 3;
+  position: fixed; 
+  bottom: 0rpx;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.musicList-page-head{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+  font-weight: bold;
+  color: white;
+  padding-left: 20rpx;
+  border-bottom: 1rpx solid #BD782D;
+  flex-flow: nowrap;
+}
+
+.musicList-page-body{
+  width: 100%;
+  height: 620rpx;
+  display: flex;
+}
+
+.musicList-page-body-list{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-flow: nowrap;
+}
+
+.musicList-page-body-list-name{
+  margin-left: 20rpx;
+  font-weight: bold;
+  font-size: 27rpx;
+}
+
+.musicList-page-body-list-artistsname{
+  font-weight: bold;
+  font-size: 23rpx;
+  color: #ccc;
+}
+
+.musicList-page-body-list-icon{
+  width:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicList-page-body-list-left-infor{
+  width:85%;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+}

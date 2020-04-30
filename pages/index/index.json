@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText": "音乐播放"
+}

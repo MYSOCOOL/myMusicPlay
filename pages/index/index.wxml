@@ -1,0 +1,114 @@
+<!--pages/showplayer/index.wxml-->
+
+<view class="applicationcontext-page"
+      style="height:{{pageHeight}}px">
+    <view class="showplery-page">
+        <image class="showplery-image-page" 
+               src="{{musicInforList.picUrl}}"
+               aanimation="{{animation}}" 
+               mode="scaleToFill"></image>
+    </view>
+    <view class="bottom-up-page">
+        <view class="icon-page-y">
+          <i-icon type="like" color="black" size="25"/>
+        </view>
+        <view class="icon-page-y">
+          <i-icon type="keyboard" color="black" size="25"/>
+        </view>  
+        <view class="yuan-page"
+              style="margin-left:20%;">
+            <i-icon type="switch" color="black" size="20"/>
+        </view>
+    </view>
+    <view class="bottom-dwon-page">
+        <view class="icon-page-y-b">
+           <i-icon type="share" color="black" size="25"/>
+        </view>
+       <view class="yuan-page-b"
+             bindtap="lastOneTap">
+            <image class="icon-imagesty" 
+                   src="../../resource/ios-arrow-dropleft.png"
+                   ></image>
+        </view>
+       <view class="yuan-page-b">
+            <image class="icon-imagesty" 
+                   src="{{playericon}}"
+                   bindtap="stopAndStartMusicTap"
+                   data-bol></image>
+        </view>
+       <view class="yuan-page-b"
+             bindtap="nextOneTap">
+            <image class="icon-imagesty" 
+                   src="../../resource/ios-arrow-dropright.png"></image>
+        </view> 
+        <view class="icon-page-y-b"
+              bindtap="showMusicListTap">
+           <i-icon type="createtask" color="black" size="25"/>
+        </view>
+       
+    </view>
+    <view class="show-textinfor-musicinfor">
+        {{musicInforList.name}} - {{musicInforList.artistsName}}
+    </view>
+</view>
+
+<view class="show-textinfor"
+      style="top:60px">
+      {{parse.showText(kphc)}}
+</view>
+
+<!--蒙版-->
+<view class="mask-page" 
+      hidden="{{showMask}}"
+      bindtap="maskTap">
+</view>
+
+<view class="musicList-page"
+      hidden="{{showCouponListHide}}">
+      <view class="musicList-page-head">
+        <view class="musicList-page-body-list-left-infor">
+        音乐列表（{{musicListInformation.length}}）
+        </view>
+        <view class="musicList-page-body-list-icon"
+              style="padding-right:3%">
+          <i-icon type="trash_fill" size="20"/>
+        </view>
+      </view>
+      <view class="musicList-page-body">
+        <scroll-view scroll-y>
+            <view class="musicList-page-body-list"
+                  wx:for="{{musicListInformation}}" 
+                  wx:for-item='musicItem' 
+                  wx:for-index='musicIndex' 
+                  wx:key='{{musicIndex}}'>
+                  <view class="musicList-page-body-list-left-infor"
+                        bindtap="musicMusicTap"
+                        data-index="{{musicIndex}}">                
+                      <view class="musicList-page-body-list-name">
+                        {{musicItem.name}}
+                      </view>
+                      <view class="musicList-page-body-list-artistsname">
+                        -{{musicItem.artistsName}}
+                      </view>
+                   </view>
+                  <view class="musicList-page-body-list-icon">
+                    <i-icon type="close" size="17"/>
+                  </view>
+            </view>
+        </scroll-view>
+      </view>
+</view>
+
+<wxs module='parse'>
+  module.exports={
+    showText:function(res){
+        if(res!=null && res!=''){
+            return res;
+        }else{
+            return "天上天下，唯我独尊，自观自在，守本真心。"; 
+        }
+    }
+  }
+</wxs>
+
+
